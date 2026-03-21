@@ -1,7 +1,9 @@
 package fr.ines.elisa.disney
 
 import android.content.Intent
+import android.graphics.Typeface
 import android.os.Bundle
+import android.view.Gravity
 import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.TextView
@@ -14,6 +16,12 @@ class HomeActivity : AppCompatActivity() {
         setContentView(R.layout.activity_home)
 
         val container = findViewById<LinearLayout>(R.id.container)
+        val profileButton = findViewById<Button>(R.id.profileButton)
+
+        profileButton.setOnClickListener {
+            val intent = Intent(this, ProfileActivity::class.java)
+            startActivity(intent)
+        }
 
         val categories = listOf(
 
@@ -111,14 +119,30 @@ class HomeActivity : AppCompatActivity() {
 
             val title = TextView(this)
             title.text = category.title
-            title.textSize = 18f
-            title.setPadding(0, 32, 0, 16)
+            title.textSize = 19f
+            title.setTypeface(null, Typeface.BOLD)
+            title.setTextColor(getColor(R.color.text_main))
+            title.setPadding(8, 28, 8, 12)
             container.addView(title)
 
             for (universe in category.universes) {
 
                 val button = Button(this)
                 button.text = universe
+                button.textSize = 14f
+                button.isAllCaps = false
+                button.gravity = Gravity.CENTER
+                button.setTextColor(getColor(R.color.text_main))
+                button.backgroundTintList = getColorStateList(R.color.rose_light)
+                button.setPadding(20, 18, 20, 18)
+                button.elevation = 2f
+
+                val params = LinearLayout.LayoutParams(
+                    LinearLayout.LayoutParams.MATCH_PARENT,
+                    LinearLayout.LayoutParams.WRAP_CONTENT
+                )
+                params.setMargins(0, 0, 0, 14)
+                button.layoutParams = params
 
                 button.setOnClickListener {
                     val intent = Intent(this, UniverseActivity::class.java)

@@ -2,8 +2,11 @@
 <resources>
 
     <style name="Theme.Disneyou" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="colorPrimary">@color/purple_500</item>
-        <item name="colorPrimaryDark">@color/purple_700</item>
-        <item name="colorAccent">@color/teal_200</item>
+        <item name="android:windowBackground">@color/background_main</item>
+        <item name="colorPrimary">@color/rose_main</item>
+        <item name="colorPrimaryDark">@color/rose_dark</item>
+        <item name="colorAccent">@color/mauve_soft</item>
+        <item name="android:textColor">@color/text_main</item>
     </style>
+
 </resources>
