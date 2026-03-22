@@ -37,65 +37,27 @@ class HomeActivity : AppCompatActivity() {
 
             Category("GRANDES SAGAS", listOf(
                 "Star Wars",
-                "Marvel Cinematic Universe",
                 "X-Men Cinematic Universe",
                 "Indiana Jones",
                 "Pirates des Caraïbes",
-                "La Coccinelle",
                 "Spider-Man",
-                "La Planète des Singes",
-                "Alien et Predator",
-                "Die Hard",
-                "Avatar",
-                "Tron"
             )),
 
             Category("AUTRES FRANCHISES DISNEY", listOf(
-                "Benjamin Gates",
-                "Dexter Riley",
-                "Flubber",
-                "Freaky Friday",
                 "L'Incroyable Voyage",
                 "La Montagne Ensorcelée",
                 "Le Monde de Narnia",
-                "Les Muppets",
                 "Les Petits Champions",
-                "Shaggy Dog",
                 "Super Noël"
             )),
 
             Category("AUTRES FRANCHISES 20TH CENTURY", listOf(
-                "Alvin et les Chipmunks",
-                "Big Mamma",
-                "Charlie Chan",
-                "Cisco Kid",
-                "Docteur Dolittle",
-                "Flicka",
-                "Hercule Poirot",
-                "Highlander",
-                "Independence Day",
-                "Jones Family",
-                "Journal d'un Dégonflé",
-                "Kingsman",
-                "L'Inspecteur Hornleigh",
-                "La Malédiction",
-                "La Mouche",
                 "La Nuit au Musée",
                 "Le Labyrinthe",
-                "Les Cavaliers de la Sauge Pourprée",
                 "Maman, J'ai Raté l'Avion",
-                "Michael Shayne",
-                "Mr. Belvédère",
-                "Mr. Moto",
-                "Percy Jackson",
-                "Porky's",
-                "Quirt & Flagg",
-                "Taken",
-                "Treize à la Douzaine"
             )),
 
             Category("AUTRES FRANCHISES MARVEL", listOf(
-                "Blade",
                 "Les Quatre Fantastiques",
                 "Men in Black"
             )),
@@ -106,22 +68,13 @@ class HomeActivity : AppCompatActivity() {
             )),
 
             Category("DIMENSION", listOf(
-                "Halloween",
                 "Scary Movie",
                 "Scream",
-                "Spy Kids"
             )),
 
             Category("FRANCHISES INTERNATIONALES", listOf(
-                "Anna et Viktor",
-                "Baaghi",
                 "Hamilton",
                 "Les Football Kings",
-                "Les Instables",
-                "Lili, la Petite Sorcière",
-                "Risto Räppääjä",
-                "The Last Warrior",
-                "Trois Couleurs"
             ))
         )
 
