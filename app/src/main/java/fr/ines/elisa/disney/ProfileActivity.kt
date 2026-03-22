@@ -20,6 +20,8 @@ class ProfileActivity : AppCompatActivity() {
     private lateinit var wantContainer: LinearLayout
     private lateinit var ownContainer: LinearLayout
     private lateinit var ridContainer: LinearLayout
+    private lateinit var navHome: Button
+    private lateinit var navProfile: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,6 +36,16 @@ class ProfileActivity : AppCompatActivity() {
         wantContainer = findViewById(R.id.wantContainer)
         ownContainer = findViewById(R.id.ownContainer)
         ridContainer = findViewById(R.id.ridContainer)
+        navHome = findViewById(R.id.navHome)
+        navProfile = findViewById(R.id.navProfile)
+
+        navHome.setOnClickListener {
+            startActivity(Intent(this, HomeActivity::class.java))
+        }
+
+        navProfile.setOnClickListener {
+            startActivity(Intent(this, ProfileActivity::class.java))
+        }
 
         val user = auth.currentUser
         if (user == null) {

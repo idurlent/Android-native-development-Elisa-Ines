@@ -17,10 +17,20 @@ class HomeActivity : AppCompatActivity() {
 
         val container = findViewById<LinearLayout>(R.id.container)
         val profileButton = findViewById<Button>(R.id.profileButton)
+        val navHome = findViewById<Button>(R.id.navHome)
+        val navProfile = findViewById<Button>(R.id.navProfile)
 
         profileButton.setOnClickListener {
             val intent = Intent(this, ProfileActivity::class.java)
             startActivity(intent)
+        }
+
+        navHome.setOnClickListener {
+            startActivity(Intent(this, HomeActivity::class.java))
+        }
+
+        navProfile.setOnClickListener {
+            startActivity(Intent(this, ProfileActivity::class.java))
         }
 
         val categories = listOf(

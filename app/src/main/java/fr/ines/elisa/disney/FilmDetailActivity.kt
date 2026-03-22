@@ -1,5 +1,6 @@
 package fr.ines.elisa.disney
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.CheckBox
@@ -22,12 +23,25 @@ class FilmDetailActivity : AppCompatActivity() {
     private lateinit var want: CheckBox
     private lateinit var own: CheckBox
     private lateinit var rid: CheckBox
+    private lateinit var navHome: Button
+    private lateinit var navProfile: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_film_detail)
 
         db = FirebaseFirestore.getInstance()
+
+        navHome = findViewById(R.id.navHome)
+        navProfile = findViewById(R.id.navProfile)
+
+        navHome.setOnClickListener {
+            startActivity(Intent(this, HomeActivity::class.java))
+        }
+
+        navProfile.setOnClickListener {
+            startActivity(Intent(this, ProfileActivity::class.java))
+        }
 
         val currentUser = FirebaseAuth.getInstance().currentUser
         if (currentUser == null) {

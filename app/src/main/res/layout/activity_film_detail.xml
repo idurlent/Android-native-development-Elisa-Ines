@@ -1,133 +1,170 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:background="@color/background_main">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:gravity="center_horizontal">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginBottom="14dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/logo_vision" />
+
+            <TextView
+                android:id="@+id/titleTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Title"
+                android:textColor="@color/text_main"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:background="@color/card_white"
+                android:padding="20dp" />
+
+            <TextView
+                android:id="@+id/dateTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Date"
+                android:textColor="@color/text_soft"
+                android:background="@color/card_white"
+                android:padding="20dp" />
+
+            <TextView
+                android:id="@+id/categoryTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Category"
+                android:textColor="@color/text_soft"
+                android:background="@color/card_white"
+                android:padding="20dp" />
+
+            <TextView
+                android:id="@+id/universeTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Universe"
+                android:textColor="@color/text_soft"
+                android:background="@color/card_white"
+                android:padding="20dp"
+                android:layout_marginBottom="16dp" />
+
+            <CheckBox
+                android:id="@+id/checkboxWatched"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Watched"
+                android:textColor="@color/text_main"
+                android:background="@color/card_white"
+                android:padding="18dp" />
+
+            <CheckBox
+                android:id="@+id/checkboxWant"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Want to watch"
+                android:textColor="@color/text_main"
+                android:background="@color/card_white"
+                android:padding="18dp" />
+
+            <CheckBox
+                android:id="@+id/checkboxOwn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Own (DVD/Blu-ray)"
+                android:textColor="@color/text_main"
+                android:background="@color/card_white"
+                android:padding="18dp" />
+
+            <CheckBox
+                android:id="@+id/checkboxRid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Want to get rid of"
+                android:textColor="@color/text_main"
+                android:background="@color/card_white"
+                android:padding="18dp"
+                android:layout_marginBottom="16dp" />
+
+            <Button
+                android:id="@+id/saveButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="@color/rose_main"
+                android:text="Save"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/resetButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="@color/mauve_soft"
+                android:text="Remove from my profile"
+                android:textAllCaps="false"
+                android:textColor="@color/text_main" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Users who own this film and want to get rid of it:"
+                android:textColor="@color/text_main"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp" />
+
+            <LinearLayout
+                android:id="@+id/ownersContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+        </LinearLayout>
+
+    </ScrollView>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="20dp"
-        android:gravity="center_horizontal">
-
-        <ImageView
-            android:layout_width="105dp"
-            android:layout_height="105dp"
-            android:layout_marginBottom="14dp"
-            android:adjustViewBounds="true"
-            android:src="@drawable/logo_vision" />
-
-        <TextView
-            android:id="@+id/titleTextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Title"
-            android:textColor="@color/text_main"
-            android:textSize="22sp"
-            android:textStyle="bold"
-            android:background="@color/card_white"
-            android:padding="20dp" />
-
-        <TextView
-            android:id="@+id/dateTextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Date"
-            android:textColor="@color/text_soft"
-            android:background="@color/card_white"
-            android:padding="20dp" />
-
-        <TextView
-            android:id="@+id/categoryTextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Category"
-            android:textColor="@color/text_soft"
-            android:background="@color/card_white"
-            android:padding="20dp" />
-
-        <TextView
-            android:id="@+id/universeTextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Universe"
-            android:textColor="@color/text_soft"
-            android:background="@color/card_white"
-            android:padding="20dp"
-            android:layout_marginBottom="16dp" />
-
-        <CheckBox
-            android:id="@+id/checkboxWatched"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Watched"
-            android:textColor="@color/text_main"
-            android:background="@color/card_white"
-            android:padding="18dp" />
-
-        <CheckBox
-            android:id="@+id/checkboxWant"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Want to watch"
-            android:textColor="@color/text_main"
-            android:background="@color/card_white"
-            android:padding="18dp" />
-
-        <CheckBox
-            android:id="@+id/checkboxOwn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Own (DVD/Blu-ray)"
-            android:textColor="@color/text_main"
-            android:background="@color/card_white"
-            android:padding="18dp" />
-
-        <CheckBox
-            android:id="@+id/checkboxRid"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Want to get rid of"
-            android:textColor="@color/text_main"
-            android:background="@color/card_white"
-            android:padding="18dp"
-            android:layout_marginBottom="16dp" />
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:background="@color/card_white">
 
         <Button
-            android:id="@+id/saveButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:backgroundTint="@color/rose_main"
-            android:text="Save"
-            android:textAllCaps="false"
-            android:textColor="@color/white" />
-
-        <Button
-            android:id="@+id/resetButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:backgroundTint="@color/mauve_soft"
-            android:text="Remove from my profile"
+            android:id="@+id/navHome"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@color/rose_light"
+            android:text="Home"
             android:textAllCaps="false"
             android:textColor="@color/text_main" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Users who own this film and want to get rid of it:"
-            android:textColor="@color/text_main"
-            android:textStyle="bold"
-            android:layout_marginBottom="10dp" />
-
-        <LinearLayout
-            android:id="@+id/ownersContainer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" />
+        <Button
+            android:id="@+id/navProfile"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@color/mauve_soft"
+            android:text="Profile"
+            android:textAllCaps="false"
+            android:textColor="@color/text_main" />
 
     </LinearLayout>
 
-</ScrollView>
+</LinearLayout>

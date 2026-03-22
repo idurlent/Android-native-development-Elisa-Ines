@@ -3,6 +3,7 @@ package fr.ines.elisa.disney
 import android.content.Intent
 import android.graphics.Typeface
 import android.os.Bundle
+import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -15,7 +16,17 @@ class UniverseActivity : AppCompatActivity() {
         setContentView(R.layout.activity_universe)
 
         val container = findViewById<LinearLayout>(R.id.container)
+        val navHome = findViewById<Button>(R.id.navHome)
+        val navProfile = findViewById<Button>(R.id.navProfile)
         val universe = intent.getStringExtra("universe") ?: ""
+
+        navHome.setOnClickListener {
+            startActivity(Intent(this, HomeActivity::class.java))
+        }
+
+        navProfile.setOnClickListener {
+            startActivity(Intent(this, ProfileActivity::class.java))
+        }
 
         val header = TextView(this)
         header.text = universe
